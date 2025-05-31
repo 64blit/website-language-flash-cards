@@ -1,0 +1,73 @@
+.difficulty-buttons {
+  text-align: center;
+  margin: 20px 0;
+  animation: fadeIn 0.3s ease-in;
+}
+
+.difficulty-prompt {
+  margin-bottom: 15px;
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.difficulty-options {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.diff-btn {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: 2px solid white;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.3s;
+  min-width: 100px;
+}
+
+.diff-btn:hover {
+  transform: scale(1.05);
+}
+
+.diff-btn.easy {
+  background: rgba(39, 174, 96, 0.8);
+  border-color: #27ae60;
+}
+
+.diff-btn.easy:hover {
+  background: #27ae60;
+}
+
+.diff-btn.medium {
+  background: rgba(241, 196, 15, 0.8);
+  border-color: #f1c40f;
+}
+
+.diff-btn.medium:hover {
+  background: #f1c40f;
+}
+
+.diff-btn.hard {
+  background: rgba(231, 76, 60, 0.8);
+  border-color: #e74c3c;
+}
+
+.diff-btn.hard:hover {
+  background: #e74c3c;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
