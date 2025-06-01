@@ -95,6 +95,253 @@ export const spanishToEnglishCards: Card[] = [
     },
     difficulty: null,
     timesShown: 0
+  },
+  {
+    id: 6,
+    front: { 
+      title: "WHY: Purpose", 
+      text: "How do you say 'in order to focus'?<div class='formula'>PARA + unchanged verb</div>" 
+    },
+    back: { 
+      title: "Para enfocarme", 
+      text: "<div class='formula'>Para + enfocarme</div><div class='example'>Estudio para aprender</div><div class='example'>Como para tener energía</div>" 
+    },
+    difficulty: null,
+    timesShown: 0
+  },
+  {
+    id: 7,
+    front: { 
+      title: "WHY: So that (with emotion/uncertainty)", 
+      text: "How do you say 'so that I can focus' (with subjunctive)?<div class='formula'>PARA + QUE + subjunctive</div>" 
+    },
+    back: { 
+      title: "Para que pueda enfocarme", 
+      text: "<div class='formula'>Para + que + pueda enfocarme</div><div class='example'>Como para que tenga energía</div><div class='note'>Uses subjunctive (emotion/uncertainty)</div>" 
+    },
+    difficulty: null,
+    timesShown: 0
+  },
+  {
+    id: 8,
+    front: { 
+      title: "WHEN: After (with subjunctive)", 
+      text: "How do you say 'after I study' (with uncertainty)?<div class='formula'>DESPUÉS + (DE) + QUE + subjunctive</div>" 
+    },
+    back: { 
+      title: "Después (de) que estudie", 
+      text: "<div class='formula'>Después (de) que + estudie</div><div class='example'>Después que coma</div><div class='note'>E ending for AR verbs, A ending for others</div>" 
+    },
+    difficulty: null,
+    timesShown: 0
+  },
+  {
+    id: 9,
+    front: { 
+      title: "Subjunctive Rule: AR verbs", 
+      text: "How do you change 'hablo' to show emotion/uncertainty?" 
+    },
+    back: { 
+      title: "Hable", 
+      text: "<div class='formula'>AR verbs change O to E</div><div class='example'>Hablo → Hable</div><div class='example'>Estudias → Estudies</div>" 
+    },
+    difficulty: null,
+    timesShown: 0
+  },
+  {
+    id: 10,
+    front: { 
+      title: "Subjunctive Rule: ER/IR verbs", 
+      text: "How do you change 'comemos' to show emotion/uncertainty?" 
+    },
+    back: { 
+      title: "Comamos", 
+      text: "<div class='formula'>ER/IR verbs change E/I to A</div><div class='example'>Comemos → Comamos</div><div class='example'>Vives → Vivas</div>" 
+    },
+    difficulty: null,
+    timesShown: 0
+  },
+  {
+    id: 11,
+    front: { 
+      title: "Vocabulary: estudiar", 
+      text: "What does 'estudiar' mean?" 
+    },
+    back: { 
+      title: "to study", 
+      text: "<div class='example'>Tengo que estudiar español</div><div class='example'>Después de estudiar</div>" 
+    },
+    difficulty: null,
+    timesShown: 0
+  },
+  {
+    id: 12,
+    front: { 
+      title: "Vocabulary: comer", 
+      text: "What does 'comer' mean?" 
+    },
+    back: { 
+      title: "to eat", 
+      text: "<div class='example'>Tengo que comer</div><div class='example'>Voy a comer después</div>" 
+    },
+    difficulty: null,
+    timesShown: 0
+  },
+  {
+    id: 13,
+    front: { 
+      title: "Vocabulary: ir", 
+      text: "What does 'ir' mean?" 
+    },
+    back: { 
+      title: "to go", 
+      text: "<div class='example'>Voy a ir</div><div class='example'>Iba a ir pero no pude</div>" 
+    },
+    difficulty: null,
+    timesShown: 0
+  },
+  {
+    id: 14,
+    front: { 
+      title: "Vocabulary: poder", 
+      text: "What does 'poder' mean?" 
+    },
+    back: { 
+      title: "to be able", 
+      text: "<div class='example'>No pude ir</div><div class='example'>Para que pueda enfocarme</div>" 
+    },
+    difficulty: null,
+    timesShown: 0
+  },
+  {
+    id: 15,
+    front: { 
+      title: "Vocabulary: enfocarme", 
+      text: "What does 'enfocarme' mean?" 
+    },
+    back: { 
+      title: "to focus", 
+      text: "<div class='example'>Para enfocarme</div><div class='example'>Para que pueda enfocarme</div>" 
+    },
+    difficulty: null,
+    timesShown: 0
+  },
+  {
+    id: 16,
+    front: { 
+      title: "Vocabulary: visitar", 
+      text: "What does 'visitar' mean?" 
+    },
+    back: { 
+      title: "to visit", 
+      text: "<div class='example'>Voy a visitar</div><div class='example'>El año pasado fui a visitar</div>" 
+    },
+    difficulty: null,
+    timesShown: 0
+  },
+  {
+    id: 17,
+    front: { 
+      title: "Vocabulary: el año pasado", 
+      text: "What does 'el año pasado' mean?" 
+    },
+    back: { 
+      title: "last year", 
+      text: "<div class='example'>El año pasado fui a España</div><div class='example'>El año pasado estudié mucho</div>" 
+    },
+    difficulty: null,
+    timesShown: 0
+  },
+  {
+    id: 18,
+    front: { 
+      title: "Vocabulary: pero", 
+      text: "What does 'pero' mean?" 
+    },
+    back: { 
+      title: "but", 
+      text: "<div class='example'>Iba a ir pero no pude</div><div class='example'>Quiero estudiar pero estoy cansado</div>" 
+    },
+    difficulty: null,
+    timesShown: 0
+  },
+  {
+    id: 19,
+    front: { 
+      title: "Vocabulary: tener", 
+      text: "What does 'tener' mean?" 
+    },
+    back: { 
+      title: "to have", 
+      text: "<div class='example'>Tengo que estudiar</div><div class='example'>Tenía que comer</div>" 
+    },
+    difficulty: null,
+    timesShown: 0
+  },
+  {
+    id: 20,
+    front: { 
+      title: "Vocabulary: aprender", 
+      text: "What does 'aprender' mean?" 
+    },
+    back: { 
+      title: "to learn", 
+      text: "<div class='example'>Voy a aprender español</div><div class='example'>Para aprender mejor</div>" 
+    },
+    difficulty: null,
+    timesShown: 0
+  },
+  {
+    id: 21,
+    front: { 
+      title: "Vocabulary: llegar", 
+      text: "What does 'llegar' mean?" 
+    },
+    back: { 
+      title: "to arrive", 
+      text: "<div class='example'>Voy a llegar tarde</div><div class='example'>Después de llegar</div>" 
+    },
+    difficulty: null,
+    timesShown: 0
+  },
+  {
+    id: 22,
+    front: { 
+      title: "Vocabulary: salir", 
+      text: "What does 'salir' mean?" 
+    },
+    back: { 
+      title: "to leave", 
+      text: "<div class='example'>Tengo que salir</div><div class='example'>Antes de salir</div>" 
+    },
+    difficulty: null,
+    timesShown: 0
+  },
+  {
+    id: 23,
+    front: { 
+      title: "Key Observation", 
+      text: "What happens to verbs immediately after PARA?" 
+    },
+    back: { 
+      title: "They remain unchanged", 
+      text: "<div class='formula'>PARA + unchanged verb</div><div class='example'>Para estudiar</div><div class='example'>Para comer</div><div class='note'>All verbs after PARA stay in infinitive form</div>" 
+    },
+    difficulty: null,
+    timesShown: 0
+  },
+  {
+    id: 24,
+    front: { 
+      title: "Key Observation", 
+      text: "What happens to verbs after DE?" 
+    },
+    back: { 
+      title: "They remain unchanged", 
+      text: "<div class='formula'>DE + unchanged verb</div><div class='example'>Después de estudiar</div><div class='example'>Antes de comer</div><div class='note'>All verbs after DE stay in infinitive form</div>" 
+    },
+    difficulty: null,
+    timesShown: 0
   }
 ];
 
