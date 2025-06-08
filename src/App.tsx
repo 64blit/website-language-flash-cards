@@ -6,6 +6,7 @@ import { DifficultyButtons } from './components/DifficultyButtons';
 import { Controls } from './components/Controls';
 import { Stats } from './components/Stats';
 import { AddCardForm } from './components/AddCardForm';
+import JsonEditor from './components/JsonEditor';
 import './App.css';
 
 function App() {
@@ -68,6 +69,7 @@ function App() {
         <Controls />
         <Stats />
         <AddCardForm />
+        <JsonEditor />
         <Navigation />
         <Flashcard />
         <DifficultyButtons />

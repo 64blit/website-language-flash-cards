@@ -44,6 +44,7 @@ export interface AppState {
   addCardVisible: boolean;
   isEditMode: boolean;
   editingCardId: number | null;
+  jsonEditorVisible: boolean;
   
   // Language configuration
   currentLanguage: LanguageConfig;
@@ -76,6 +77,8 @@ export interface AppActions {
   toggleStats: () => void;
   toggleAddCard: () => void;
   cancelEdit: () => void;
+  toggleJsonEditor: () => void;
+  importCards: (cards: Card[]) => void;
   
   // Language management
   setLanguage: (languageCode: string) => void;

@@ -26,6 +26,7 @@ export const useFlashcardStore = create<FlashcardStore>()(
       addCardVisible: false,
       isEditMode: false,
       editingCardId: null,
+      jsonEditorVisible: false,
       currentLanguage: languageConfigs[0],
       availableLanguages: languageConfigs,
       nextCardId: 1000, // Start custom IDs high to avoid conflicts
@@ -269,15 +270,51 @@ export const useFlashcardStore = create<FlashcardStore>()(
           },
           { easy: 0, medium: 0, hard: 0, unrated: 0 }
         );
-      }
+      },
+
+      toggleJsonEditor: () => set((state) => {
+        state.jsonEditorVisible = !state.jsonEditorVisible;
+      }),
+
+      importCards: (cards: Card[]) => set((state) => {
+        // Update cards and rebuild deck
+        state.cards = cards;
+        
+        // Rebuild deck with frequency weighting
+        const hardCards = cards.filter(card => card.difficulty === 'hard');
+        const mediumCards = cards.filter(card => card.difficulty === 'medium' || card.difficulty === null);
+        const easyCards = cards.filter(card => card.difficulty === 'easy');
+        
+        const shuffledHard = shuffleArray(hardCards);
+        const shuffledMedium = shuffleArray(mediumCards);
+        const shuffledEasy = shuffleArray(easyCards);
+        
+        const newDeck = [
+          ...shuffledHard, ...shuffledHard, ...shuffledHard, // 3x
+          ...shuffledMedium, ...shuffledMedium, // 2x
+          ...shuffledEasy // 1x
+        ];
+        
+        state.deck = shuffleArray(newDeck);
+        state.currentCardIndex = 0;
+        state.isFlipped = false;
+        state.showingDifficultyButtons = false;
+        
+        // Update metadata
+        state.customCardCount = cards.filter(card => card.isCustom).length;
+        state.nextCardId = Math.max(...cards.map(c => c.id), 999) + 1;
+      })
     })),
     {
       name: 'flashcard-storage',
       partialize: (state) => ({
         cards: state.cards,
+        deck: state.deck,
+        currentCardIndex: state.currentCardIndex,
         currentLanguage: state.currentLanguage,
         nextCardId: state.nextCardId,
-        customCardCount: state.customCardCount
+        customCardCount: state.customCardCount,
+        availableLanguages: state.availableLanguages
       })
     }
   )

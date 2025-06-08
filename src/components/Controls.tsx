@@ -8,6 +8,7 @@ export const Controls: React.FC = () => {
     resetProgress,
     toggleStats,
     toggleAddCard,
+    toggleJsonEditor,
     setLanguage,
     currentLanguage,
     availableLanguages
@@ -47,6 +48,9 @@ export const Controls: React.FC = () => {
         </button>
         <button className="control-btn" onClick={toggleAddCard}>
           ➕ Add Card
+        </button>
+        <button className="control-btn" onClick={toggleJsonEditor}>
+          📝 Edit JSON
         </button>
       </div>
     </div>
