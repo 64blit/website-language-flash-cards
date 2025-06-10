@@ -7,8 +7,15 @@ const JsonEditor = () => {
   const { cards, jsonEditorVisible, toggleJsonEditor, importCards } = useFlashcardStore();
   const [jsonText, setJsonText] = useState('');
   const [error, setError] = useState<string>('');
+  const [isInitialized, setIsInitialized] = useState(false);
 
-  if (!jsonEditorVisible) return null;
+  if (!jsonEditorVisible) {
+    // Reset initialization flag when modal is closed
+    if (isInitialized) {
+      setIsInitialized(false);
+    }
+    return null;
+  }
 
   const handleOpen = () => {
     const jsonString = JSON.stringify(cards, null, 2);
@@ -52,9 +59,19 @@ const JsonEditor = () => {
     toggleJsonEditor();
   };
 
+  const handleClear = () => {
+    setJsonText('[]');
+    setError('');
+    // Clear localStorage
+    localStorage.removeItem('flashcard-storage');
+    // Import empty array to reset the store
+    importCards([]);
+  };
+
   // Initialize JSON when modal opens
-  if (jsonText === '' && jsonEditorVisible) {
+  if (!isInitialized && jsonEditorVisible) {
     handleOpen();
+    setIsInitialized(true);
   }
 
   return (
@@ -82,6 +99,9 @@ const JsonEditor = () => {
         </div>
         
         <div className="json-editor-actions">
+          <button className="clear-button" onClick={handleClear}>
+            Clear All
+          </button>
           <button className="cancel-button" onClick={handleCancel}>
             Cancel
           </button>
