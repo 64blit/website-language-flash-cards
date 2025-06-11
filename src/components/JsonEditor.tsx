@@ -34,8 +34,8 @@ const JsonEditor = () => {
 
       // Basic validation of card structure
       for (const card of parsedCards) {
-        if (!card.id || typeof card.id !== 'number') {
-          throw new Error('Each card must have a numeric id');
+        if (card.id === undefined || card.id === null) {
+          throw new Error('Each card must have an id');
         }
         if (!card.front || !card.back) {
           throw new Error('Each card must have front and back content');
